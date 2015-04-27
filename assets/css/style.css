@@ -1,0 +1,899 @@
+/* Please read through the provided code below to understand it */
+
+.carousel-container{
+	width: 960px;
+	height: 500px;
+	margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#carousel{
+	width: 5760px;
+	height: 100%;
+	margin-left: 0px;
+	-webkit-transition: all 0.3s;
+}
+
+.carousel-item{
+	width: 960px;
+	float: left;
+	position: relative;
+	height: 100%;
+}
+
+.section{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+#name-section{
+	background-color: #2bde73;
+}
+
+#major-section{
+	background-color: #8bb2af;
+}
+
+#fact-section{
+	background-color: #fff;
+}
+
+#fact-text{
+	color: black;
+}
+
+/* DOCUMENT SET UP */
+
+body, html {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	min-width: 960px;
+	background-color: black;
+	-webkit-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-family: Lato;
+}
+
+a {
+	text-decoration: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.img-scaled {
+	width: 100%;
+	height: 100%;
+}
+
+.img-scaled-wh {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.images{
+	width: 100%;
+	height: 100%;
+}
+}
+/* YOU DON'T NEED TO UNDERSTAND THE CODE BELOW */
+
+#nav-toggle { 
+	position: absolute; 
+	left: 50%; top: 50%; 
+}
+
+#nav-toggle {
+	padding: 10px 30px 15px 0px; 
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+	height: 3px;
+	width: 30px;
+	background: #fff;
+	position: absolute;
+	display: block;
+	content: '';
+}
+
+#nav-toggle span:before {
+	top: -10px; 
+}
+
+#nav-toggle span:after {
+	bottom: -10px;
+}
+
+
+
+/* Overriding default styles on the ul */
+.sidebar-container ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-top: 10px;
+}
+
+.page-wrapper {
+	height: 100%;
+	width: 100%;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+
+/* Styling for the carousel previous button */
+#carousel-prev {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    left: 60px;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    -webkit-transition: all 0.3s;
+    visibility: visible;
+    display: none;
+}
+
+/* Styling for the carousel next button */
+#carousel-next {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    right: 60px;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    -webkit-transition: all 0.3s;
+    visibility: visible;
+    display: block;
+}
+
+/* Styling for the author text in each quote */
+.fellowship {
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: .2rem;
+	text-transform: uppercase;
+	margin-top: 10px;
+	text-align: center;
+	color: white;
+	position: relative;
+}
+.fellowship1{
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: .2rem;
+	text-transform: uppercase;
+	margin-top: 70px;
+	text-align: center;
+	color: white;
+	position: relative;
+}
+
+/* jQuery Manipulation Classes */
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.wrapper-active, .button-active {
+	-webkit-transform: translateX(280px);
+	-moz-transform: translateX(280px);
+	transform: translateX(280px);
+}
+
+
+#calender{
+	margin-left: 21%;
+	margin-top: 8%;
+	padding-bottom: 30px;
+}
+#ccf {
+    position: relative;
+    width: 280px;
+    height: 200px;
+    padding: 10px;
+	left: 35%;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    top: 50%;
+    margin-top: -30px;
+}
+#bcm {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+	left: 38%;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    top: 50%;
+    margin-top: -30px;
+}
+#lafe {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+	left: 38%;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    top: 50%;
+    margin-top: -30px;
+}
+#ism {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+	left: 33%;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    top: 50%;
+    margin-top: -30px;
+}
+#kapwa {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+	left: 33%;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    top: 50%;
+    margin-top: -30px;
+}
+#greek {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+	left: 34%;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    top: 50%;
+    margin-top: 15px;
+}
+#division{
+	color: white;
+}
+.dots{
+	position: relative;
+	left: 42.5%;
+	margin-top: 25%;
+	-webkit-transition: all 0s;
+}
+#logo{
+	position: relative;
+	margin-bottom: -8%;
+	margin-left: 37%;
+	height: auto;
+	width: 26%;
+	cursor: pointer;
+}
+#logo1{
+	position: relative;
+	margin-bottom: -10%;
+	margin-left: 37%;
+	height: auto;
+	width: 350px;
+	cursor: pointer;
+}
+#Home{
+	color: white;
+	float: left;
+	width: 25%;
+	text-align: center;
+	margin-bottom: 10px;
+	border: white;
+	border-radius: 2px;
+}
+#Calender{
+	color: white;
+	float: left;
+	width: 25%;
+	text-align: center;
+	margin-bottom: 10px;
+}
+#InterVarsity{
+	color: white;
+	float: left;
+	width: 25%;
+	text-align: center;
+	margin-bottom: 10px;
+}
+#AboutUs{
+	color: white;
+	float: left;
+	width: 25%;
+	text-align: center;
+	margin-bottom: 10px;
+}
+nav {
+  width: 100%;
+  height: 60px; 
+  position: relative; 
+  background: black;
+  bottom: 0;
+  z-index: 100;
+}
+
+nav ul {
+  padding: 20px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+nav ul li a {
+  padding: 10px 0;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  width: 30px;
+  height: 30px;
+	border-style: solid;
+	border-color: white;
+	border-width:0.1em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+nav ul li a:hover {
+  color: #00CFFF;
+    border-color: #00CFFF;
+}
+a.active {
+  border-bottom: 2px solid #ecf0f1;
+}
+nav.after{
+	  color: #00CFFF;
+}
+#icon{
+	width: 20px;
+	height: auto;
+	position: relative;
+	margin-bottom: 5px;
+	margin-left: 8px;
+	vertical-align: middle;
+	display: inline-block;
+	z-index: 100;
+}
+#icon-active{
+	padding: 10px 0;
+  color: #00CFFF;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  width: 30px;
+  height: 30px;
+	border-style: solid;
+	border-color: #00CFFF;
+	border-width:0.1em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#titleau{
+	  padding: 10px 0;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  width: 300px;
+  height: auto;
+	border-style: solid;
+	border-color: white;
+	border-width:0.1em;
+  padding-left: 10px;
+  padding-right: 10px;
+text-align: center;
+margin-left: 38%;
+margin-top: 7%;
+}
+#contentau{
+padding: 10px 0;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  width: 300px;
+  height:auto;
+	border-style: solid;
+	border-color: white;
+	border-width:0.1em;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  margin-left: 38%;
+  text-transform: uppercase;
+}
+.sexy_line1{ 
+    margin: 25px 0;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(black), to(black), color-stop(50%, white));
+    margin-top:-6%;
+}
+.sexy_line2{ 
+    margin: 25px 0;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(black), to(black), color-stop(50%, white));
+    margin-top: 11%;
+    margin-bottom: -8.4%;
+}
+#modal-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 100;
+}
+#modal-box{
+    width: 250px;
+    height: auto;
+    background-color: black;
+    color: white;
+	 margin-left: 71%;
+	 margin-top: -33%;
+    z-index: 100;
+    border-style: solid;
+	 border-color: white;
+	 border-width:0.1em;
+  	padding-left: 10px;
+  	padding-right: 10px;
+  	text-align: center;
+  	display: none;
+  	font-family: "Lato";
+  	text-transform: uppercase;
+}
+#lm1{
+margin-left: 85%;
+margin-top: 25%;
+  padding: 10px 0;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  width: 110px;
+  height: auto;
+	border-style: solid;
+	border-color: white;
+	border-width:0.1em;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+#lm1:hover {
+  color: #00CFFF;
+  border-color: #00CFFF;
+}
+#lm2{
+margin-left: 85%;
+margin-top: 25%;
+  padding: 10px 0;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  width: 110px;
+  height: auto;
+  border-style: solid;
+  border-color: white;
+  border-width:0.1em;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+#lm2:hover {
+  color: #00CFFF;
+  border-color: #00CFFF;
+}
+#lm3{
+margin-left: 85%;
+margin-top: 25%;
+  padding: 10px 0;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  width: 110px;
+  height: auto;
+  border-style: solid;
+  border-color: white;
+  border-width:0.1em;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+#lm3:hover {
+  color: #00CFFF;
+  border-color: #00CFFF;
+}
+#lm4{
+margin-left: 85%;
+margin-top: 25%;
+  padding: 10px 0;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  width: 110px;
+  height: auto;
+  border-style: solid;
+  border-color: white;
+  border-width:0.1em;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+#lm4:hover {
+  color: #00CFFF;
+  border-color: #00CFFF;
+}
+#lm5{
+margin-left: 85%;
+margin-top: 25%;
+  padding: 10px 0;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  width: 110px;
+  height: auto;
+  border-style: solid;
+  border-color: white;
+  border-width:0.1em;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+#lm5:hover {
+  color: #00CFFF;
+  border-color: #00CFFF;
+}
+#lm6{
+margin-left: 85%;
+margin-top: 24%;
+  padding: 10px 0;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  width: 110px;
+  height: auto;
+  border-style: solid;
+  border-color: white;
+  border-width:0.1em;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+#lm6:hover {
+  color: #00CFFF;
+  border-color: #00CFFF;
+}
+#dotbar{
+  position: absolute;
+  margin-top: 39.3%;
+  margin-left: -18.5%;
+  height: auto;
+}
+#dot1{
+  position: relative;
+  margin-left: 411px;
+  margin-bottom: -27.5%;
+  width: auto;
+  height: 3%;
+}
+#dot2{
+  position: relative;
+  margin-left: 433px;
+  margin-bottom: -27.5%;
+  width: auto;
+  height: 3%;
+}
+#dot3{
+  position: relative;
+  margin-left: 455px;
+  margin-bottom: -27.5%;
+  width: auto;
+  height: 3%;
+}
+#dot4{
+  position: relative;
+  margin-left: 478px;
+  margin-bottom: -27.5%;
+  width: auto;
+  height: 3%;
+}
+#dot5{
+  position: relative;
+  margin-left: 500px;
+  margin-bottom: -27.5%;
+  width: auto;
+  height: 3%;
+}
+#dot6{
+  position: relative;
+  margin-left: 522px;
+  margin-bottom: -27%;
+  width: auto;
+  height: 3%;
+}
+#modal-container2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 100;
+}
+#modal-box2{
+    width: 250px;
+    height: auto;
+    background-color: black;
+    color: white;
+   margin-left: 71%;
+   margin-top: -38%;
+    z-index: 100;
+    border-style: solid;
+   border-color: white;
+   border-width:0.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    display: none;
+    font-family: "Lato";
+    text-transform: uppercase;
+}
+#modal-container3{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 100;
+}
+#modal-box3{
+    width: 250px;
+    height: auto;
+    background-color: black;
+    color: white;
+   margin-left: 71%;
+   margin-top: -33%;
+    z-index: 100;
+    border-style: solid;
+   border-color: white;
+   border-width:0.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    display: none;
+    font-family: "Lato";
+    text-transform: uppercase;
+}
+#modal-container4{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 100;
+}
+#modal-box4{
+    width: 250px;
+    height: auto;
+    background-color: black;
+    color: white;
+   margin-left: 71%;
+   margin-top: -38%;
+    z-index: 100;
+    border-style: solid;
+   border-color: white;
+   border-width:0.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    display: none;
+    font-family: "Lato";
+    text-transform: uppercase;
+}
+#modal-container5{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 100;
+}
+#modal-box5{
+    width: 250px;
+    height: auto;
+    background-color: black;
+    color: white;
+   margin-left: 71%;
+   margin-top: -35%;
+    z-index: 100;
+    border-style: solid;
+   border-color: white;
+   border-width:0.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    display: none;
+    font-family: "Lato";
+    text-transform: uppercase;
+}
+#modal-container6{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 100;
+}
+#modal-box6{
+    width: 250px;
+    height: auto;
+    background-color: black;
+    color: white;
+   margin-left: 71%;
+   margin-top: -36%;
+    z-index: 100;
+    border-style: solid;
+   border-color: white;
+   border-width:0.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    display: none;
+    font-family: "Lato";
+    text-transform: uppercase;
+}
+#callogo{
+  z-index: 5001;
+  position: relative;
+    margin-bottom: -15%;
+      margin-left: 5%;
+}
+#wallpaper{
+  z-index: 5000;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+#logotop{
+  z-index: 5001;
+  position: relative;
+  margin-left: 20%;
+  margin-bottom: -15%;
+}
+#enter{
+  position: absolute;
+  z-index: 5001;
+  left: 45%;
+  bottom: 23%;
+  padding: 10px 0;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  width: 110px;
+  height: auto;
+  border-style: solid;
+  border-color: white;
+  border-width:0.2em;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.6);
+}
+#enter:hover {
+  color: #FFD700;
+  border-color: #FFD700;
+}
+#modal-overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    display: none;
+    position: absolute;
+}
+#modal-overlay2{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    display: none;
+    position: absolute;
+}
+#modal-overlay3{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    display: none;
+    position: absolute;
+}
+#modal-overlay4{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    display: none;
+    position: absolute;
+}
+#modal-overlay5{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    display: none;
+    position: absolute;
+}
+#modal-overlay6{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    display: none;
+    position: absolute;
+}
+.button {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    float: left;
+    -webkit-transition: all 0.3s;
+    margin-left: 3px;
+}
+.button-container{
+  margin-left: 45%;
+  position: absolute;
+}
+#btn1{
+  background-color: #00CFFF;
+}
+#btn2{
+  background-color: black;
+}
+#btn3{
+  background-color: black;
+}
+#btn4{
+  background-color: black;
+}
+#btn5{
+  background-color: black;
+}
+#btn6{
+  background-color: black;
+}
